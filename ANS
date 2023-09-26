@@ -1,0 +1,65 @@
+1. To calculate the number of seconds in an hour, you can multiply the number of seconds in a minute (60) by the number of minutes in an hour (also 60):
+
+```python
+60 * 60
+# Output: 3600
+```
+
+So, there are 3600 seconds in an hour.
+
+2. Assign the result to a variable called `seconds_per_hour`:
+
+```python
+seconds_per_hour = 60 * 60
+```
+
+3. To calculate the number of seconds in a day, you can use the `seconds_per_hour` variable along with the number of hours in a day (24):
+
+```python
+seconds_per_day = seconds_per_hour * 24
+```
+
+4. Now, you have the result in a variable called `seconds_per_day`.
+
+5. To find out how many hours are in a day, you can divide `seconds_per_day` by `seconds_per_hour` using floating-point division:
+
+```python
+seconds_per_day / seconds_per_hour
+# Output: 24.0
+```
+
+So, there are 24 hours in a day.
+
+6. To divide `seconds_per_day` by `seconds_per_hour` using integer division (floor division), you can use the `//` operator:
+
+```python
+seconds_per_day // seconds_per_hour
+# Output: 24
+```
+
+The result is 24, which is the same as the floating-point value but without the decimal part.
+
+7. Here's a Python generator function called `genPrimes` that returns a sequence of prime numbers on successive calls to its `next()` method:
+
+```python
+def genPrimes():
+    primes = []
+    n = 2
+
+    while True:
+        if all(n % prime != 0 for prime in primes):
+            primes.append(n)
+            yield n
+        n += 1
+```
+
+You can use it like this:
+
+```python
+prime_generator = genPrimes()
+print(next(prime_generator))  # Output: 2
+print(next(prime_generator))  # Output: 3
+print(next(prime_generator))  # Output: 5
+print(next(prime_generator))  # Output: 7
+# Continue calling next() to generate more prime numbers
+```
